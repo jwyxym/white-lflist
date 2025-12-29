@@ -1,0 +1,3 @@
+*.cdb
+*.conf
+/node_modules
