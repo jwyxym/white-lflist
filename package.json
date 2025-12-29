@@ -4,9 +4,9 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },
-	"scripts": {
-		"start": "ts-node index.ts"
-	},
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
   "dependencies": {
     "sql.js": "^1.13.0"
   }
