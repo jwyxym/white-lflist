@@ -30,7 +30,7 @@ const write = (cards : Array<Array<string | number>>, dt : string) : void => {
 		encoding: 'utf8',
 		autoClose: false
 	});
-	lflist.write('!dt\r\n');
+	lflist.write(`!${argvs[3]}\r\n`);
 	const dts = dt.split(/\r?\n/).map(i => {
 		const ct = i.indexOf(' ');
 		if (ct !== -1) {
