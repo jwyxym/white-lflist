@@ -41,9 +41,11 @@ const write = (cards : Array<Array<string | number>>, dt : string) : void => {
 		return [];
 	}).filter(i => i.length > 0);
 	cards.forEach(i => {
-		const code = '0'.repeat(Math.max(0, 8 - i[0].toString().length)) + i[0].toString();
-		if (!dts.map(i => i[0]).includes(code))
-		lflist.write(`${code} 0 --${i[12]}\r\n`);
+		if (i[2] === 0) {
+			const code = '0'.repeat(Math.max(0, 8 - i[0].toString().length)) + i[0].toString();
+			if (!dts.map(i => i[0]).includes(code))
+			lflist.write(`${code} 0 --${i[12]}\r\n`);
+		}
 	});
 	dts.forEach(i => {
 		lflist.write(`${i[0]}${i[1]}\r\n`);
